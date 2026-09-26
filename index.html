@@ -9,7 +9,7 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b6f68'/%3E%3Cpath d='M29 14h6v15h15v6H35v15h-6V35H14v-6h15z' fill='white'/%3E%3C/svg%3E">
   <style>
     :root {
-      color-scheme: light;
+      color-scheme: light dark;
       --ink: #142927;
       --muted: #526865;
       --teal: #0b6f68;
@@ -67,6 +67,16 @@
       .details { min-height: 320px; }
       h1 { letter-spacing: -.05em; }
     }
+    @media (prefers-color-scheme: dark) {
+      :root { --ink: #eff7f7; --muted: #c3d4d9; --line: #344953; --surface: #17272d; --background: #101b20; }
+      body { background: #101b20; }
+      a, a:hover { color: #7de3d2; }
+      .card { background: #17272d; border-color: #344953; }
+      .notice, .eyebrow, .button.secondary { background: #203b37; color: #c3eee5; }
+      .details { background: #07564f; }
+      .details a, .button { color: white; }
+      a:focus-visible { outline-color: #7de3d2; }
+    }
   </style>
 </head>
 <body>
@@ -100,7 +110,7 @@
           <dt>Contact</dt>
           <dd><a href="mailto:kontakt@anatvet.net">kontakt@anatvet.net</a></dd>
           <dt>Privacy</dt>
-          <dd><a href="/privacy/">Privacy Policy</a></dd>
+          <dd><a href="/privacy/">Privacy Policy</a><br><a href="/privacy/" lang="en" hreflang="en">English</a> | <a href="/privacy/pl/" lang="pl" hreflang="pl">Polski</a></dd>
         </dl>
       </aside>
     </main>
